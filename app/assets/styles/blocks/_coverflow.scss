@@ -1,0 +1,50 @@
+.bls-coverflow {
+  margin: 0 auto;
+
+  &__container {
+    list-style: none;
+    // background: $error-color;
+
+    // &::before {
+    //   content: '50%';
+    //   width: 50%;
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   background: $success-color;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   color: $white;
+    //   font-size: rem(36px);
+    // }
+  }
+
+  figure {
+    margin: 0;
+    position: relative;
+  }
+
+  figcaption {
+    text-align: center;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($black, .8);
+    color: $white;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &__item {
+
+    &.active {
+      figcaption {
+        opacity: 1;
+      }
+    }
+  }
+}

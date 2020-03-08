@@ -1,0 +1,20 @@
+include ../mixins/all.pug
+- var active;
+header#header
+  .container
+    .header-top
+      +link('Site\'s logo', 'index.html', 'Site\'s logo').logo
+        +img('Site\'s logo', require('../../assets/images/logo-white.png'))
+      a.hamburger-menu(data-bls-dropdown="data-bls-dropdown",data-target='#menuWrapper',href='javascript:void(0);',title='Menu')
+        span
+          span
+          span
+        span
+          span
+          span
+        span
+          span
+          span
+    .header-bottom
+      .header__navigation.bls-dropdown__menu#menuWrapper
+        include ./menu

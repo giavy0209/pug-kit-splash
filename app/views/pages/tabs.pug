@@ -1,0 +1,49 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control: Tabs
+      .desc
+        p Adding tabs features into HTML defined structure.
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="#")
+        .form-group
+          .tabs-wrapper
+            ul.nav.bls-tab(data-bls-tabs)
+              li.bls-tab__item.active
+                a.bls-tab__link(href='#tab1',title='Tab 1') Tab 1
+              li.bls-tab__item
+                a.bls-tab__link(href='#tab2',title='Tab 2') Tab 2
+              li.bls-tab__item
+                a.bls-tab__link(href='#tab3',title='Tab 3') Tab 3
+            .bls-tab__wrapper
+              .bls-panel.active#tab1
+                .bls-panel__body
+                  h4 This is tab 1
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .bls-panel#tab2
+                .bls-panel__body
+                  h4 This is tab 2
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .bls-panel#tab3
+                .bls-panel__body
+                  h4 This is tab 3
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')

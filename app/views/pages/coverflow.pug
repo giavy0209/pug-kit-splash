@@ -1,0 +1,47 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Coverflow
+  section.section-two
+    .container
+      h3 Simple coverflow
+      form.form-demo(action="#")
+        .form-group
+          ul(data-bls-coverflow)
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}
+          ul(data-bls-coverflow,data-path='concave')
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}
+          ul(data-bls-coverflow,data-type='circle',data-height='400')
+            each val in [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}
+          ul(data-bls-coverflow,data-type='circle',data-height='400',data-direction-z='-1')
+            each val in [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}

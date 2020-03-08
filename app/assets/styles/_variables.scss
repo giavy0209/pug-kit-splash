@@ -1,0 +1,56 @@
+// Specs: https://xd.adobe.com/view/5ab86198-56f3-4894-6c4c-49bd532da33e-2c89/screen/382334b5-5669-4deb-929a-c47178439abf/Guide-3-1
+
+// color
+$primary-color: #4faac7;
+$secondary-color: #69c0ac;
+$highlight-color: #009afe;
+$border-primary-color: #004672;
+$border-secondary-color: #98d0c3;
+
+$white-sequence-1: #fff;
+$white-sequence-2: #f6f6f6;
+$grey-sequence-1: #e2e7ee;
+$grey-sequence-2: #a8aab7;
+$grey-sequence-3: #9d9d9d;
+$grey-sequence-4: #575757;
+
+$footer-bg-color: #565656;
+$footer-text-color: #2b4252;
+$footer-line-color: #c6c5c9;
+
+$success-color: #39b54a;
+$error-color: #f85359;
+
+// grid
+$screen-xxs: 320px;
+$screen-xs: 414px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xlg: 1200px;
+$screen-xxlg: 1920px;
+
+$screen-xs-up: ($screen-sm - 1px);
+$screen-sm-up: ($screen-md - 1px);
+$screen-md-up: ($screen-lg - 1px);
+$screen-hd-up: ($screen-xxlg - 1px);
+
+//typo
+$font-size-base: 16px;
+$font-thin: 100;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 900;
+
+$font-primary: 'Comfortaa', -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
+  'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-fontback: sans-serif;
+
+$code-facebook: #3b5998;
+$code-twitter: #0084b4;
+$code-linkedin: #0077b5;
+$code-instagram: #8a3ab9;

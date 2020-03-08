@@ -1,0 +1,24 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control - Progress
+      .desc
+        p By default, all validate rules base on HTML5 attribute pattern and required.
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="#",method="POST",data-bls-validation="data-bls-validation")
+        .form-group
+          input.form-control#demoOne(type='number', placeholder="Set value")
+        .form-group
+          progress(max=100,value=10)

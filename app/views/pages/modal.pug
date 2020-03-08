@@ -1,0 +1,106 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Modal
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      h3 Basic modal: inner HTML
+      form.form-demo(action="")
+        .form-group
+          button.btn.btn-primary(type="button",data-bls-modal,data-target='#innerModal') Click to open Modal
+          #innerModal.bls-modal
+            .bls-modal__instance
+              .bls-modal__header
+                h4 Modal heading
+                a.bls-btn__close(href='javascript:void',title='Close')
+              .bls-modal__body
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .bls-modal__footer
+                a.btn.btn-secondary.bls-btn__close(href='javascript:void',title='Close') Close Modal
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+      h3 Basic modal: iframe
+      form.form-demo(action="")
+        .form-group
+          button.btn.btn-primary(type="button",data-bls-modal,data-target='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.135207144965!2d106.71858131539261!3d10.800954992304916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a7ad8a2b43%3A0xce09fbe803e8661!2zMTUyLzExQiDEkGnhu4duIEJpw6puIFBo4bunLCBQaMaw4budbmcgMjUsIELDrG5oIFRo4bqhbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1564461556474!5m2!1svi!2s',data-type='iframe') Click to open Modal
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+      form.form-demo(action="")
+        .form-group
+          h3 Basic modal: ajax (response HTML)
+          button.btn.btn-primary(type="button",data-bls-modal,data-target='./particle/dummy-html.html',data-type='ajax',data-display='center') Click to open Modal
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+      form.form-demo(action="")
+        .form-group
+          h3 Basic modal: ajax (response JSON)
+          button.btn.btn-primary(type="button",data-bls-modal,data-target='https://jsonplaceholder.typicode.com/albums',data-type='ajax',data-template='./particle/list_album.html') Click to open Modal
+          button.btn.btn-secondary#destroy(type="button") Click to destroy
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+  section.section-three
+    .container
+      h2.heading II - Animation Effect
+      h3 Slide From Top (One direction)
+      form.form-demo(action="")
+        .form-group
+          button.btn.btn-primary(type="button",data-bls-modal,data-target='#innerModalTop',data-effect-in='slidetop',data-display='center') Click to open Modal
+          #innerModalTop.bls-modal
+            .bls-modal__instance
+              .bls-modal__header
+                a.bls-btn__close(href='javascript:void',title='Close')
+              .bls-modal__body
+                h4 Modal heading
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .bls-modal__footer
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+      h3 Slide From Top - Out To Bottom (two directions)
+      form.form-demo(action="")
+        .form-group
+          button.btn.btn-primary(type="button",data-bls-modal,data-target='#innerModalTopBottom',data-effect-in='slidetop',data-effect-out='slidebottom',data-display='center') Click to open Modal
+          #innerModalTopBottom.bls-modal
+            .bls-modal__instance
+              .bls-modal__header
+                a.bls-btn__close(href='javascript:void',title='Close')
+              .bls-modal__body
+                h4 Modal heading
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .bls-modal__footer
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')

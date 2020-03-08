@@ -1,0 +1,66 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Gallery
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="")
+        -
+          arr = ['https://picsum.photos/id/0/100/70','https://picsum.photos/id/1/100/70','https://picsum.photos/id/2/100/70','https://picsum.photos/id/3/100/70','https://picsum.photos/id/4/100/70','https://picsum.photos/id/5/100/70','https://picsum.photos/id/6/100/70','https://picsum.photos/id/7/100/70','https://picsum.photos/id/8/100/70','https://picsum.photos/id/9/100/70','https://picsum.photos/id/10/100/70','https://picsum.photos/id/11/100/70','https://picsum.photos/id/12/100/70','https://picsum.photos/id/13/100/70','https://picsum.photos/id/14/100/70','https://picsum.photos/id/15/100/70','https://picsum.photos/id/16/100/70','https://picsum.photos/id/17/100/70','https://picsum.photos/id/18/100/70','https://picsum.photos/id/19/100/70','https://picsum.photos/id/20/100/70']
+          arrM = ['https://picsum.photos/id/0/800/500','https://picsum.photos/id/1/800/500','https://picsum.photos/id/2/800/500','https://picsum.photos/id/3/800/500','https://picsum.photos/id/4/800/500','https://picsum.photos/id/5/800/500','https://picsum.photos/id/6/800/500','https://picsum.photos/id/7/800/500','https://picsum.photos/id/8/800/500','https://picsum.photos/id/9/800/500','https://picsum.photos/id/10/800/500','https://picsum.photos/id/11/800/500','https://picsum.photos/id/12/800/500','https://picsum.photos/id/13/800/500','https://picsum.photos/id/14/800/500','https://picsum.photos/id/15/800/500','https://picsum.photos/id/16/800/500','https://picsum.photos/id/17/800/500','https://picsum.photos/id/18/800/500','https://picsum.photos/id/19/800/500','https://picsum.photos/id/20/800/500']
+        .form-group
+          h3 Basic gallery: list source in attribute
+          button.btn.btn-primary(type="button",data-bls-gallery,data-sources=arrM,data-thumbnails=arr) Click to open Gallery
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+        .form-group
+          h3 Basic gallery: group of element
+        .form-group
+          .gallery-wrapper(data-bls-gallery)
+            each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+              a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+        .form-group
+          h3 Basic gallery: group of element without thumbnail
+        .form-group
+          .gallery-wrapper(data-bls-gallery,data-thumbnail='false')
+            each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+              a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+        .form-group
+          h3 With only 1 item
+          .gallery-wrapper.gallery-wrapper-single(data-bls-gallery)
+            each val in [20]
+              a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+        .form-group
+          h3 Ajax gallery: group contents JSON
+        .form-group
+          .gallery-wrapper(data-bls-gallery,data-type='ajax',data-template='./particle/album_detail.html')
+            each val in [1,2,3,4,5,6,7,8,9,10]
+              a.img(href=`https://jsonplaceholder.typicode.com/photos?albumId=${val}`,data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+        .form-group
+          h3 Ajax gallery: group contents HTML
+        .form-group
+          .gallery-wrapper#htmlGallery(data-type='ajax')
+            each val in [1,2,3,4,5,6,7,8,9]
+              .img
+                h5 Title ...
+                .desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, mollitia? Placeat cupiditate autem nemo, temporibus iure sed itaque doloribus ab nesciunt, in vero voluptates quidem at repudiandae laudantium. Repudiandae, illum?
+                a.load-more(href='./particle/dummy-html.html', title='Load more') Load more

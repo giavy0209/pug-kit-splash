@@ -1,0 +1,122 @@
+.nav-main {
+  margin: 0 -15px;
+  padding: 0 15px;
+  font-size: rem(14px);
+  z-index: 1;
+  height: 100%;
+  @include  background-opacity($primary-color, .95);
+  ul {
+    list-style: none;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__menu {
+    margin: 0 auto;
+    padding: 0 calc(#{$grid-gutter-width} / 2);
+
+    a {
+      color: $white-sequence-1;
+    }
+
+  }
+}
+
+.sub-navigation {
+
+  .btn-primary {
+    &:hover,
+    &:focus {
+      background: $error-color;
+      border-color: $error-color;
+    }
+  }
+
+  .active {
+    .btn-primary {
+      background: $error-color;
+      border-color: $error-color;
+    }
+  }
+}
+
+@include desktop-up {
+  .nav-main {
+    .nav-main {
+      margin: 0;
+      padding: 0;
+      background: none;
+      height: 100%;
+      &__menu {
+        display: flex;
+        justify-content: flex-end;
+        max-width: none;
+        padding: 0;
+        align-items: center;
+        height: 100%;
+
+        li {
+          &:hover,
+          &.selected,
+          &.active {
+            background: none;
+
+            a {
+              font-weight: 500;
+              color: $white-sequence-1;
+              text-shadow: 1px 1px 2px rgba($footer-text-color, .6);
+              &::before {
+                background: $white-sequence-1;
+              }
+            }
+          }
+        }
+      }
+
+      &__link {
+        line-height: 1;
+        padding: 10px calc(#{$grid-gutter-width} / 2);
+        position: relative;
+        font-size: rem(16px);
+        color: $white-sequence-1;
+        &[href="javascript:void(0)"],
+        &[href="#"] {
+          cursor: default;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          height: 5px;
+          border-radius: 5px;
+          background: none;
+          bottom: 0;
+          left: 16px;
+          right: 16px;
+          transition: all .3s ease-in;
+        }
+        &:hover {
+          font-weight: 500;
+          color: $white-sequence-1;
+          text-shadow: 1px 1px 2px rgba($footer-text-color, .6);
+          &::before {
+            background: $white-sequence-1;
+          }
+        }
+        .hover & {
+          font-weight: 500;
+          &::before {
+            background: $white-sequence-1;
+          }
+        }
+        li:hover & {
+          font-weight: 500;
+          &::before {
+            background: $white-sequence-1;
+          }
+        }
+      }
+    }
+  }
+}

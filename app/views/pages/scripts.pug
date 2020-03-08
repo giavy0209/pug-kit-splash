@@ -1,0 +1,33 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control: Scripts
+      .desc
+        p Dynamic loading script
+  section.section-two
+    .container
+      h2.heading I - Basic usage
+      form.form-demo(action="#")
+        .form-group
+          ul(data-bls-script)
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')

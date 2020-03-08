@@ -1,0 +1,32 @@
+.form-demo {
+  margin-bottom: 35px;
+}
+.bls-form-control {
+  .form-heading {
+    display: block;
+    font-weight: 600;
+  }
+}
+
+.radio-box {
+  display: block;
+  position: relative;
+  input,
+  .form-control {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+@include desktop-up {
+  .form-demo {
+    margin-bottom: 60px;
+  }
+}

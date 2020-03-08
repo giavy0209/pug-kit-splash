@@ -1,0 +1,59 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 0
+  //- scriptpage = 'home'
+
+block container
+  section.section-home-one
+    .container
+      .widget-page-info
+        h1 BrayLeino Splash Web Starter Kit (BLS WS)
+        .description
+          p StarterKit for building website
+          p.light ver 2.0.0 - 12 Sep 2019
+  section.section-home-two
+    .container
+      h2.heading Key Features
+      ul
+        li Easy to start BLS's project
+        li Easy to customize output target
+        li No jQuery (or any JS framework) but easy to import anything
+      h3.sub-heading Technologies:
+      ul
+        li
+          a(href='https://pugjs.org/api/getting-started.html', title='Pug') Pug (HTMLtemplate building)
+        li
+          a(href='https://www.dailysmarty.com/posts/what-is-scss', title='What is SCSS?') SCSS (Sassy Cascading Style Sheets)
+        li
+          a(href='https://www.w3schools.com/js/js_es6.asp', title='Javascript (ES6 - ECMAScript 2015)') Javascript (ES6 - ECMAScript 2015)
+        li
+          p Bundler tool:&nbsp;
+            a(href='https://webpack.js.org/' ,title='webpack') Webpack
+        li
+          p Unit Test:&nbsp;
+            a(href='https://mochajs.org/' ,title='MochaJS') MochaJS
+            |  +
+            a(href='https://www.chaijs.com/', title='Chai') Chai
+            |  +
+            a(href='https://sinonjs.org/', title='Sinon') Sinon
+  section.section-home-three
+    .container
+      h2.heading Repository:
+      ul
+        li
+          h4 StarterKit
+          a(href='http://gitlabvn.splashinteractive.sg/front-end/brayleinosplash-starter-kit') http://gitlabvn.splashinteractive.sg/front-end/brayleinosplash-starter-kit
+        li
+          h4 Demo Site
+          a(href='http://gitlabvn.splashinteractive.sg/front-end/brayleinosplash-starter-kit-document') http://gitlabvn.splashinteractive.sg/front-end/brayleinosplash-starter-kit-document
+  section.section-home-four
+    .container
+      h2.heading Bugs / Request New Feature:
+      p Please report to&nbsp;
+        a(href='https://jira.splashinteractive.sg/secure/RapidBoard.jspa?rapidView=85&projectKey=FS&sprint=2853', title='Jira system')
+          strong BrayLeinoSplash StarterKit
+        |  sprint on Jira

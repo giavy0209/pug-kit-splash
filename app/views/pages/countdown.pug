@@ -1,0 +1,37 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control - Countdown
+      .desc
+        p Countdown to deadline
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="#")
+        .form-group
+          .timer(data-bls-countdown)
+            .day
+              span 00
+              .caption Days
+            .break :
+            .hour
+              span 00
+              .caption Hours
+            .break :
+            .minute
+              span 00
+              .caption Minutes
+            .break :
+            .second
+              span 00
+              .caption Seconds

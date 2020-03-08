@@ -1,0 +1,116 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Collapse - Accordion
+  section.section-two
+    .container
+      h3 Collapse
+      form.form-demo(action="#")
+        .form-group
+          button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelOne',value='') Heading 1
+          .bls-panel#panelOne
+            .bls-panel__body
+              h4 Collapse 1
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelTwo',value='') Heading 2
+          .bls-panel#panelTwo
+            .bls-panel__body
+              h4 Collapse 2
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelThree',value='') Heading 3
+          .bls-panel#panelThree
+            .bls-panel__body
+              h4 Collapse 3
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <button class="bls-accordion__heading" type="button" data-bls-accordion="" data-target="#panelOne" value="">Heading 1</button>
+              <div class="bls-panel" id="panelOne" style="height: 0px;">
+                <div class="bls-panel__body">
+                  <h4>Collapse 1</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+              <button class="bls-accordion__heading" type="button" data-bls-accordion="" data-target="#panelTwo" value="">Heading 2</button>
+              <div class="bls-panel" id="panelTwo" style="height: 0px;">
+                <div class="bls-panel__body">
+                  <h4>Collapse 2</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+              <button class="bls-accordion__heading" type="button" data-bls-accordion="" data-target="#panelThree" value="">Heading 3</button>
+              <div class="bls-panel" id="panelThree" style="height: 0px;">
+                <div class="bls-panel__body">
+                  <h4>Collapse 3</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const accordions = new BlsAccordion();
+      h3 Accordion
+      form.form-demo(action="")
+        .form-group
+          button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelGroupOne',data-group='accordion',value='') Heading 1
+          .bls-panel#panelGroupOne
+            .bls-panel__body
+              h4 Accordion 1
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelGroupTwo',data-group='accordion',value='') Heading 2
+          .bls-panel#panelGroupTwo
+            .bls-panel__body
+              h4 Accordion 2
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelGroupThree',data-group='accordion',value='') Heading 3
+          .bls-panel#panelGroupThree
+            .bls-panel__body
+              h4 Accordion 3
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <button class="bls-accordion__heading" type="button" data-bls-accordion="" data-target="#panelGroupOne" data-group="accordion" value="">Heading 1</button>
+              <div class="bls-panel" id="panelGroupOne">
+                <div class="bls-panel__body">
+                  <h4>Accordion 1</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+              <button class="bls-accordion__heading" type="button" data-bls-accordion="" data-target="#panelGroupTwo" data-group="accordion" value="">Heading 2</button>
+              <div class="bls-panel" id="panelGroupTwo">
+                <div class="bls-panel__body">
+                  <h4>Accordion 2</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+              <button class="bls-accordion__heading" type="button" data-bls-accordion="" data-target="#panelGroupThree" data-group="accordion" value="">Heading 3</button>
+              <div class="bls-panel" id="panelGroupThree">
+                <div class="bls-panel__body">
+                  <h4>Accordion 3</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const accordions = new BlsAccordion();

@@ -1,0 +1,224 @@
+.section-four {
+  overflow: hidden;
+}
+
+.form-demo {
+  .bls-calendar {
+    max-width: 280px;
+    font-size: rem(12px);
+
+    &__table {
+
+      th,
+      td {
+        width: calc(100% / 7);
+        span {
+          padding: 5px;
+        }
+      }
+    }
+
+    &__input {
+      width: 280px;
+    }
+
+    &.bls-calendar--fluid {
+      max-width: none;
+
+      .bls-calendar {
+
+        &__nav {
+          width: 70%;
+          max-width: 280px;
+          margin: 0 auto;
+
+          button {
+            border: none;
+          }
+        }
+
+        &__table {
+          th,
+          td {
+            border-spacing: 0;
+          }
+
+          th {
+            background: none;
+            border: none;
+            span {
+              text-align: right;
+            }
+          }
+
+          td {
+
+            span {
+              height: 100px;
+              display: flex;
+              padding: 0 5px;
+              margin: 5px 0;
+              align-items: flex-start;
+              justify-content: flex-end;
+              font-size: 0;
+
+              &::before {
+                content: attr(data-text);
+                font-size: rem(16px);
+                border: none;
+                right: 5px;
+                z-index: 4;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+              }
+
+              &:hover {
+
+                &::before {
+                  border: none;
+                  background: $secondary-color;
+                }
+              }
+
+              &.has-event {
+
+                &::before {
+                  background: $white-sequence-1;
+                }
+              }
+            }
+
+            &:first-child,
+            &:last-child {
+              background: $grey-sequence-1;
+            }
+          }
+
+          .current-day {
+
+            &::before {
+              border: none;
+              background: $error-color;
+              color: $white-sequence-1;
+            }
+          }
+        }
+
+        &__heading-title {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.bls-calendar {
+  .bls-carousel {
+    overflow: visible;
+
+    .event-item {
+      opacity: 0;
+      transition: opacity 0.1s ease;
+      z-index: -1;
+
+      &.active {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+  .event-item {
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+
+    &__thumbnail {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      pointer-events: none;
+
+      img {
+        position: relative;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        width: auto;
+
+        &.loaded {
+          width: 100%;
+        }
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      margin: 0;
+      background: $grey-sequence-1;
+      padding: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: position .3s linear;
+      z-index: -1;
+    }
+  }
+
+  .bls-carousel {
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    &__slider {
+      height: 100%;
+    }
+
+    &__dots {
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .event-item {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+    }
+  }
+
+  .selected {
+    z-index: 2;
+  }
+
+  .event-item {
+
+    &.open {
+
+      .event-item {
+
+        &__content {
+          z-index: 2;
+          top: 100%;
+          margin: 3px 0 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

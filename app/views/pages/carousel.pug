@@ -1,0 +1,483 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Carousel
+  section.section-two
+    .container
+      h2.heading I - Simple Setting
+      h3 Not Loop:
+      form.form-demo(action="")
+        .form-group
+          ul.bls-carousel__slider(data-bls-carousel,data-loop=0,data-auto=1)
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <ul class="bls-carousel__slider" data-bls-carousel="" data-loop="1">
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 1" src="https://picsum.photos/id/1/400/300">
+                    </div>
+                    <figcaption>Photo 1</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 2" src="https://picsum.photos/id/2/400/300">
+                    </div>
+                    <figcaption>Photo 2</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 3" src="https://picsum.photos/id/3/400/300">
+                    </div>
+                    <figcaption>Photo 3</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 4" src="https://picsum.photos/id/4/400/300">
+                    </div>
+                    <figcaption>Photo 4</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 5" src="https://picsum.photos/id/5/400/300">
+                    </div>
+                    <figcaption>Photo 5</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 6" src="https://picsum.photos/id/6/400/300">
+                    </div>
+                    <figcaption>Photo 6</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 7" src="https://picsum.photos/id/7/400/300">
+                    </div>
+                    <figcaption>Photo 7</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 8" src="https://picsum.photos/id/8/400/300">
+                    </div>
+                    <figcaption>Photo 8</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 9" src="https://picsum.photos/id/9/400/300">
+                    </div>
+                    <figcaption>Photo 9</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 10" src="https://picsum.photos/id/10/400/300">
+                    </div>
+                    <figcaption>Photo 10</figcaption>
+                  </figure>
+                </li>
+              </ul>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const carousels = new BlsCarousel();
+      h3 Infinite Loop:
+      form.form-demo(action="")
+        .form-group
+          ul.bls-carousel__slider(data-bls-carousel,data-loop=1)
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <ul class="bls-carousel__slider" data-bls-carousel="" data-loop="1">
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 1" src="https://picsum.photos/id/1/400/300">
+                    </div>
+                    <figcaption>Photo 1</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 2" src="https://picsum.photos/id/2/400/300">
+                    </div>
+                    <figcaption>Photo 2</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 3" src="https://picsum.photos/id/3/400/300">
+                    </div>
+                    <figcaption>Photo 3</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 4" src="https://picsum.photos/id/4/400/300">
+                    </div>
+                    <figcaption>Photo 4</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 5" src="https://picsum.photos/id/5/400/300">
+                    </div>
+                    <figcaption>Photo 5</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 6" src="https://picsum.photos/id/6/400/300">
+                    </div>
+                    <figcaption>Photo 6</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 7" src="https://picsum.photos/id/7/400/300">
+                    </div>
+                    <figcaption>Photo 7</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 8" src="https://picsum.photos/id/8/400/300">
+                    </div>
+                    <figcaption>Photo 8</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 9" src="https://picsum.photos/id/9/400/300">
+                    </div>
+                    <figcaption>Photo 9</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 10" src="https://picsum.photos/id/10/400/300">
+                    </div>
+                    <figcaption>Photo 10</figcaption>
+                  </figure>
+                </li>
+              </ul>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const carousels = new BlsCarousel();
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <ul class="bls-carousel__slider" data-bls-carousel="" data-loop="1">
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 1" src="https://picsum.photos/id/1/400/300">
+                    </div>
+                    <figcaption>Photo 1</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 2" src="https://picsum.photos/id/2/400/300">
+                    </div>
+                    <figcaption>Photo 2</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 3" src="https://picsum.photos/id/3/400/300">
+                    </div>
+                    <figcaption>Photo 3</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 4" src="https://picsum.photos/id/4/400/300">
+                    </div>
+                    <figcaption>Photo 4</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 5" src="https://picsum.photos/id/5/400/300">
+                    </div>
+                    <figcaption>Photo 5</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 6" src="https://picsum.photos/id/6/400/300">
+                    </div>
+                    <figcaption>Photo 6</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 7" src="https://picsum.photos/id/7/400/300">
+                    </div>
+                    <figcaption>Photo 7</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 8" src="https://picsum.photos/id/8/400/300">
+                    </div>
+                    <figcaption>Photo 8</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 9" src="https://picsum.photos/id/9/400/300">
+                    </div>
+                    <figcaption>Photo 9</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 10" src="https://picsum.photos/id/10/400/300">
+                    </div>
+                    <figcaption>Photo 10</figcaption>
+                  </figure>
+                </li>
+              </ul>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const carousels = new BlsCarousel();
+      h3 Optional items display on screen and translate
+      form.form-demo(action="")
+        .form-group
+          ul.bls-carousel__slider.bls-carousel__responsive(data-class='slide-two')
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              li
+                figure
+                  .img
+                    +lazyImg({
+                      fake: require('../../assets/images/ajax-loader.gif'),
+                      alt: `Photo ${val}`,
+                      src: `https://picsum.photos/id/${val}/800/600`
+                    })
+                  figcaption Photo !{val}
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <ul class="bls-carousel__slider" data-bls-carousel="" data-items="2" data-items-move="2" data-class="slide-two" data-loop="1">
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 1" data-bls-lazy="" src="https://picsum.photos/id/1/400/300" data-source="https://picsum.photos/id/1/400/300">
+                    </div>
+                    <figcaption>Photo 1</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 2" data-bls-lazy="" src="https://picsum.photos/id/2/400/300" data-source="https://picsum.photos/id/2/400/300">
+                    </div>
+                    <figcaption>Photo 2</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 3" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/3/400/300">
+                    </div>
+                    <figcaption>Photo 3</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 4" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/4/400/300">
+                    </div>
+                    <figcaption>Photo 4</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 5" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/5/400/300">
+                    </div>
+                    <figcaption>Photo 5</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 6" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/6/400/300">
+                    </div>
+                    <figcaption>Photo 6</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 7" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/7/400/300">
+                    </div>
+                    <figcaption>Photo 7</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 8" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/8/400/300">
+                    </div>
+                    <figcaption>Photo 8</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 9" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/9/400/300">
+                    </div>
+                    <figcaption>Photo 9</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 10" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/10/400/300">
+                    </div>
+                    <figcaption>Photo 10</figcaption>
+                  </figure>
+                </li>
+              </ul>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const carousels = new BlsCarousel();
+      h3 Setting by javascript
+      form.form-demo(action="")
+        .form-group
+          a.btn.btn-primary#destroy(href='javascript:void(0)', title='Destroy') Destroy
+        .form-group
+          ul.bls-carousel__slider#blsCarouselJS
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              li
+                figure
+                  .img
+                    +lazyImg({
+                      fake: require('../../assets/images/ajax-loader.gif'),
+                      alt: `Photo ${val}`,
+                      src: `https://picsum.photos/id/${val}/800/600`
+                    })
+                  figcaption Photo !{val}
+      
+      h3 Fade Effect:
+      form.form-demo(action="")
+        .form-group
+          ul.bls-carousel__slider(data-bls-carousel,data-loop=1,data-fade=1)
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              li
+                figure
+                  .img
+                    +img(`Photo ${val}`, `https://picsum.photos/id/${val}/400/300`)
+                  figcaption Photo !{val}
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+              <ul class="bls-carousel__slider" data-bls-carousel="" data-items="2" data-items-move="2" data-class="slide-two" data-loop="1" data-fade="1">
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 1" data-bls-lazy="" src="https://picsum.photos/id/1/400/300" data-source="https://picsum.photos/id/1/400/300">
+                    </div>
+                    <figcaption>Photo 1</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 2" data-bls-lazy="" src="https://picsum.photos/id/2/400/300" data-source="https://picsum.photos/id/2/400/300">
+                    </div>
+                    <figcaption>Photo 2</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 3" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/3/400/300">
+                    </div>
+                    <figcaption>Photo 3</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 4" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/4/400/300">
+                    </div>
+                    <figcaption>Photo 4</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 5" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/5/400/300">
+                    </div>
+                    <figcaption>Photo 5</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 6" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/6/400/300">
+                    </div>
+                    <figcaption>Photo 6</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 7" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/7/400/300">
+                    </div>
+                    <figcaption>Photo 7</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 8" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/8/400/300">
+                    </div>
+                    <figcaption>Photo 8</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 9" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/9/400/300">
+                    </div>
+                    <figcaption>Photo 9</figcaption>
+                  </figure>
+                </li>
+                <li class="bls-carousel__item">
+                  <figure>
+                    <div class="img"><img alt="Photo 10" data-bls-lazy="" src="ajax-loader.gif" data-source="https://picsum.photos/id/10/400/300">
+                    </div>
+                    <figcaption>Photo 10</figcaption>
+                  </figure>
+                </li>
+              </ul>
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const carousels = new BlsCarousel();

@@ -1,0 +1,25 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control - Free arrange
+      .desc
+        p Free arrange ...
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="#")
+        .form-group
+          #freeArrange(data-bls-freearrange)
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1, 209]
+              .img(class = val%2 == 0 ? 'img-1x' : 'img-2x')
+                +img(`Photo ${val}`, `https://picsum.photos/id/${val}/${val%2===0?100:200}/${val%2===0?50:150}`)

@@ -1,0 +1,7 @@
+include ../mixins/all
+ul.list-users
+  |{{#each this}}
+  li
+    a(href='//profile/{{username}}',title='{{username}}') {{name}}
+    p {{address.suite}} {{address.street}} {{address.city}}
+  |{{/each}}

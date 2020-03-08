@@ -1,0 +1,14 @@
+footer {
+  background: $footer-bg-color;
+  color: $white-sequence-1;
+  padding: 15px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

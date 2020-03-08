@@ -1,0 +1,17 @@
+/* import custom fonts */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=vietnamese');
+// @import url('./_fontface.scss');
+
+
+/* 3rd & BrayLeinoSplash plugins */
+@import './plugins';
+
+@import './variables';
+@import './mixin';
+
+/* Site style */
+@import './common';
+@import './global/all';
+@import './blocks/all';
+
+/* CMS overwrite styles */

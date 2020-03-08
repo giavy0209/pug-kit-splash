@@ -1,0 +1,11 @@
+@import '../variables';
+@import '../common';
+
+.bls-free-arrange {
+  position: relative;
+
+  &__item {
+    position: absolute;
+  }
+
+}

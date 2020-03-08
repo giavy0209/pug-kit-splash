@@ -1,0 +1,25 @@
+.bls-scroll {
+  background: $grey-sequence-1;
+}
+.bls-panel {
+  &[data-bls-scroll] {
+    padding: 15px;
+    display: block;
+  }
+
+  .gallery-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    li {
+      margin-bottom: 0;
+    }
+    .img {
+      width: auto;
+      padding: 0;
+      min-width: 200px;
+    }
+  }
+}

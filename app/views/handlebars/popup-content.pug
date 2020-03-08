@@ -1,0 +1,7 @@
+include ../mixins/all
+ul.list-group
+  |{{#if productList}}
+  |{{#each productList}}
+  li.list-group-item {{title}}
+  |{{/each}}
+  |{{/if}}

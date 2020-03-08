@@ -1,0 +1,66 @@
+html {
+  font-size: 14px;
+}
+
+html,
+body {
+  font-family: $font-fontback;
+  color: $grey-sequence-4;
+  line-height: 1.2;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  .wf-active & {
+    font-family: $font-primary;
+    font-weight: $font-normal;
+  }
+}
+
+* {
+  &:active,
+  :focus {
+    outline: none;
+  }
+}
+
+a {
+  color: $highlight-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.invisible-title {
+  visibility: hidden;
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  opacity: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+  li {
+    margin-bottom: 15px;
+    word-break: break-all;
+  }
+}
+
+@include tablet-up {
+
+  html {
+    font-size: 16px;
+  }
+}

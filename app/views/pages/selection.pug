@@ -1,0 +1,113 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Selection
+      .desc
+        p Wrapper the native select tag to easier styling.
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="#")
+        .form-group
+          .bls-form-control
+            label.form-heading(for="defaultOne") 1 - None selected
+            select.select-one#defaultOne(data-bls-selection,data-placeholder="This is select 1")
+              option(value=1) Option title 1
+              option(value=2) Option title 2
+              option(value=3) Option title 3
+              option(value=4) Option title 4
+              option(value=5) Option title 5
+            button.btn.btn-secondary#destroyOne(type='button', title='Destroy') Destroy
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+            <select class="select-one" id="defaultOne" data-bls-selection data-placeholder="This is select 1">
+              <option value="1">Option title 1</option>
+              <option value="2">Option title 2</option>
+              <option value="3">Option title 3</option>
+              <option value="4">Option title 4</option>
+              <option value="5">Option title 5</option>
+            </select>
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+            //-| var selects = new Selection();
+            | const selectDemoOne = new Selection({selector:'#defaultOne'});
+      form.form-demo(action="#")
+        .form-group
+          .bls-form-control
+            label.form-heading(for="defaultTwo") 2 - Has selected
+            select.select-two#defaultTwo(data-bls-selection,data-placeholder="This is select 2 with selected option")
+              option(value=1) Option title 1
+              option(value=2,selected) Option title 2
+              option(value=3) Option title 3
+              option(value=4) Option title 4
+              option(value=5) Option title 5
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+            <select class="select-one" id="defaultTwo" data-bls-selection data-placeholder="This is select 2 with selected option">
+              <option value="1">Option title 1</option>
+              <option value="2" selected>Option title 2</option>
+              <option value="3">Option title 3</option>
+              <option value="4">Option title 4</option>
+              <option value="5">Option title 5</option>
+            </select>
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+            | const selectDemoTwo = new Selection({selector:'#defaultTwo'});
+      form.form-demo(action="#")
+        .form-group
+          .bls-form-control
+            label.form-heading(for="defaultThree") 3 - Multi selected
+            select.select-two#defaultThree(data-bls-selection,data-placeholder="This is select with multiple attribute",multiple)
+              option(value=1) Option title 1
+              option(value=2,selected) Option title 2
+              option(value=3,selected) Option title 3
+              option(value=4,selected) Option title 4
+              option(value=5) Option title 5
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+            <select class="select-three" id="defaultThree" data-bls-selection data-placeholder="This is select with multiple attribute">
+              <option value="1">Option title 1</option>
+              <option value="2" selected>Option title 2</option>
+              <option value="3" selected>Option title 3</option>
+              <option value="4" selected>Option title 4</option>
+              <option value="5">Option title 5</option>
+            </select>
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+            | const selectDemoThree = new Selection({selector:'#defaultThree'});
+      form.form-demo(action="#")
+        .form-group
+          .bls-form-control
+            label.form-heading(for="defaultTwo") 4 - Mobile native element
+            select.select-two#defaultFour(data-bls-selection,data-mobile=0,data-placeholder="Using mobile native element")
+              option(value=1) Option title 1
+              option(value=2) Option title 2
+              option(value=3) Option title 3
+              option(value=4) Option title 4
+              option(value=5) Option title 5
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+            <select class="select-one" id="defaultTwo" data-bls-selection data-mobile="0" data-placeholder="Using mobile native element">
+              <option value="1">Option title 1</option>
+              <option value="2">Option title 2</option>
+              <option value="3">Option title 3</option>
+              <option value="4">Option title 4</option>
+              <option value="5">Option title 5</option>
+            </select>

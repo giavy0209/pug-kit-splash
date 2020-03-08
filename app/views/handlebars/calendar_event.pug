@@ -1,0 +1,7 @@
+include ../mixins/all
+.event-item(data-start-date='{{startdate}}', data-end-date='{{enddate}}')
+  .event-item__thumbnail
+    img(data-bls-lazy='data-bls-lazy',src=require('../../assets/images/ajax-loader.gif'),data-source='{{thumbnail}}')
+  .event-item__content
+    h5 {{name}}
+    h6 {{starttime}} - {{endtime}}

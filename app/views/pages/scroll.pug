@@ -1,0 +1,135 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Custom Scrollbar
+  section.section-two
+    .container
+      h3 Vertical
+      button.btn.btn-secondary#destroy(type='button', title='Destroy') Destroy
+      form.form-demo(action="#")
+        .form-group
+          .bls-panel#div900(data-bls-scroll,data-height=300)
+            h4 Here is a block with vertical custom scrollbar
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const accordions = new BlsScroll();
+      h3 No scroll
+      form.form-demo(action='#')
+        .form-group
+          .bls-panel#divNoScroll(data-bls-scroll,data-height=300)
+            h4 Here is a block with vertical custom scrollbar
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+      h3 Horizontal
+      form.form-demo(action="#")
+        .form-group
+          .bls-panel#div1000(data-bls-scroll,data-width='100%',data-type='horizontal')
+            h4 Here is a block with horizontal custom scrollbar
+            ul.gallery-wrapper(data-bls-gallery)
+              each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+                li
+                  a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                    +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const accordions = new BlsScroll();
+      h3 Both
+      form.form-demo(action="#")
+        .form-group
+          .bls-panel#divBoth(data-bls-scroll,data-height=200,data-width='100%',data-type='both')
+            h4 Here is a block with horizontal and vertical custom scrollbar
+            ul.gallery-wrapper(data-bls-gallery)
+              each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+                li
+                  a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                    +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+            ul.gallery-wrapper(data-bls-gallery)
+              each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+                li
+                  a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                    +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+            ul.gallery-wrapper(data-bls-gallery)
+              each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+                li
+                  a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                    +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+            ul.gallery-wrapper(data-bls-gallery)
+              each val in [10,11,12,13,14,15,16,17,18,19,110,111,112,113,114,115,116,117,118,119]
+                li
+                  a.img(href=`https://picsum.photos/id/${val}/640/360`, title=`https://picsum.photos/id/${val}/320/180`, data-thumbnail=`https://picsum.photos/id/${val}/100/70`)
+                    +img(`https://picsum.photos/id/${val}`,`https://picsum.photos/id/${val}/320/180`)
+        .form-group
+          h6 HTML
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          .code-view
+            textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+              | const accordions = new BlsScroll({
+              | selector: '#divBoth',
+              | lineToScroll: 20,
+              | });
+      h3 With update content dynamic
+      form.form-demo(action="#")
+        .form-group
+          p
+            button.btn.btn-primary#btnAddData(type='button') Add data
+          .bls-panel#divScrollData(data-bls-scroll,data-height=200,data-width='100%',data-type='vertical')
+            h4 Here is a block with custome scrollbar with dynamic content
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error ipsum labore qui iste minima odio vel. Ad commodi nam debitis iste nesciunt quibusdam deleniti, dolores quae iure minima molestiae.

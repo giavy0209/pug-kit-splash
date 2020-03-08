@@ -1,0 +1,7 @@
+include ../mixins/all
+ul.album-detail
+  |{{#each this}}
+  li
+    a(href='//album/{{albumId}}',title='{{title}}')
+      +img('{{title}}','{{thumbnailUrl}}')
+  |{{/each}}

@@ -1,0 +1,33 @@
+.bls-free-arrange {
+  width: 100%;
+  background: $grey-sequence-2;
+  border: solid 5px $grey-sequence-2;
+  min-height: 410px;
+
+  .img {
+
+    &::before {
+      content: attr(data-index);
+      position: absolute;
+      font-size: rem(32px);
+      color: $white;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, .7);
+    }
+
+    &.img-1x {
+      width: 100px;
+    }
+
+    &.img-2x {
+      width: 200px;
+    }
+
+  }
+}

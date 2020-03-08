@@ -1,0 +1,704 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 1
+  //- scriptpage = 'home'
+
+block container
+  section.section-document-one
+    .container
+      .wedget-page-info
+        h1 BLS WS Document
+        .description
+          p.light ver 2.0.0 - 12 Sep 2019
+  section.section-document-two
+    .container
+      h2.heading Global Rules
+      ol
+        li
+          p HTML: use
+            a(href='https://pugjs.org/api/getting-started.html', title='PUG teamplate') PUG teamplate
+            |  for development
+        li
+          p CSS: use SCSS with&nbsp;
+            a(href='http://getbem.com/introduction/', title='BEM') BEM
+            |  naming convention
+        li
+          p JS: use ES6 with ESlint (customize from AirBnB rules -&nbsp;
+            a(href="http://airbnb.io/javascript/", title='http://airbnb.io/javascript/', target='_blank') http://airbnb.io/javascript/
+            | )
+        li
+          p Unit Test: using&nbsp;
+            a(href='https://mochajs.org/' ,title='MochaJS') MochaJS
+            |  +
+            a(href='https://www.chaijs.com/', title='Chai') Chai
+            |  +
+            a(href='https://sinonjs.org/', title='Sinon') Sinon
+  section.section-document-three
+    .container
+      h2.heading Documents
+      p BLS classes have at least 2 methods: constructor and init
+      p BLS class's constructor have only 1 parameter (setting: Object) and it return&nbsp;
+        strong an array
+        | &nbsp;of plugin instances.
+      p Setting object for BLS class constructor usually have 2 properties: one is&nbsp;
+        strong selector
+        | &nbsp;and the other is&nbsp;
+        strong events
+        |  and can be set by Javascript or&nbsp;
+        strong dataset in HTML
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelOne',value='panelOne') Accordion
+      .bls-panel#panelOne
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell button[data-bls-accordion]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell target
+              .table-cell
+              .table-cell CSS selector to get DOM elements for target panel.
+            .table-row
+              .table-cell group
+              .table-cell
+              .table-cell Create accordion effect (in 1 group will only 1 panel opened per time)
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeOpen
+              .table-cell instance (object)
+              .table-cell callback will run before collapse instance open
+            .table-row
+              .table-cell afterOpen
+              .table-cell instance (object)
+              .table-cell callback will run after collapse instance open
+            .table-row
+              .table-cell beforeClose
+              .table-cell instance (object)
+              .table-cell callback will run before collapse instance close
+            .table-row
+              .table-cell afterClose
+              .table-cell instance (object)
+              .table-cell callback will run after collapse instance close
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell open
+              .table-cell
+              .table-cell open instance
+            .table-row
+              .table-cell close
+              .table-cell
+              .table-cell close instance
+          a.btn.btn-primary(href='accordion.html', title='Accordion demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelTwo',value='panelTwo') Carousel
+      .bls-panel#panelTwo
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell [data-bls-carousel]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell nav
+              .table-cell true
+              .table-cell enable navigation buttons (prev and next)
+            .table-row
+              .table-cell dots
+              .table-cell true
+              .table-cell enable paging
+            .table-row
+              .table-cell items
+              .table-cell 1
+              .table-cell total items display per slide
+            .table-row
+              .table-cell itemsMove
+              .table-cell 1
+              .table-cell total items moved per slide
+            .table-row
+              .table-cell spacing
+              .table-cell 0
+              .table-cell spacing between 2 items
+            .table-row
+              .table-cell loop
+              .table-cell false
+              .table-cell infinite loop
+            .table-row
+              .table-cell auto
+              .table-cell false
+              .table-cell auto play
+            .table-row
+              .table-cell timeShow
+              .table-cell 3000
+              .table-cell time (in milliseconds) paused before go to next slide (only usefull when autoplay = true)
+            .table-row
+              .table-cell timeSlide
+              .table-cell 300
+              .table-cell time (in milliseconds) for each transtion of slide. Default value set in css.
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeChange
+              .table-cell instance (object)
+              .table-cell callback will fire before carousel moved to new item(s)
+            .table-row
+              .table-cell afterChange
+              .table-cell instance (object)
+              .table-cell callback will fire before carousel move to new item(s)
+            .table-row
+              .table-cell resizeHeight
+              .table-cell instance (object)
+              .table-cell callback will fire after active slide item resize completed
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell goNext
+              .table-cell
+              .table-cell go to next slide(s)
+            .table-row
+              .table-cell goPrevious
+              .table-cell
+              .table-cell go to previous slide(s)
+            .table-row
+              .table-cell goToPage
+              .table-cell page
+              .table-cell go to page
+          a.btn.btn-primary(href='carousel.html', title='Carousel demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelThree',value='panelThree') Dropdown
+      .bls-panel#panelThree
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell button[data-bls-dropdown]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell target
+              .table-cell
+              .table-cell CSS selector to get DOM elements for target dropdown.
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeOpen
+              .table-cell instance (object)
+              .table-cell callback will run before dropdown instance open
+            .table-row
+              .table-cell afterOpen
+              .table-cell instance (object)
+              .table-cell callback will run after dropdown instance open
+            .table-row
+              .table-cell beforeClose
+              .table-cell instance (object)
+              .table-cell callback will run before dropdown instance close
+            .table-row
+              .table-cell afterClose
+              .table-cell instance (object)
+              .table-cell callback will run after dropdown instance close
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell open
+              .table-cell
+              .table-cell open instance
+            .table-row
+              .table-cell close
+              .table-cell
+              .table-cell close instance
+          a.btn.btn-primary(href='dropdown.html', title='Dropdown demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelFour',value='panelFour') Modal
+      .bls-panel#panelFour
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell [data-bls-modal]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell type
+              .table-cell
+                strong inner
+                br
+                | iframe, ajax, video
+              .table-cell type of modal
+            .table-row
+              .table-cell display
+              .table-cell
+                strong fix
+                br
+                | center, fullscreen
+              .table-cell style of modal's display
+            .table-row
+              .table-cell overlay
+              .table-cell true
+              .table-cell close when click on overlay
+            .table-row
+              .table-cell scrollOverlay
+              .table-cell true
+              .table-cell show scrollbar when modal longer than screen
+            .table-row
+              .table-cell close
+              .table-cell true
+              .table-cell show close button
+            .table-row
+              .table-cell effectIn
+              .table-cell
+                strong fade
+                br
+                | slidetop, slidebottom
+              .table-cell Animation effect of modal when open, support: fade, slidetop, slidebottom
+            .table-row
+              .table-cell effectOut
+              .table-cell
+                strong fade
+                br
+                | slidetop, slidebottom
+              .table-cell Animation effect of modal when close, support: fade, slidetop, slidebottom
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeOpen
+              .table-cell instance (object)
+              .table-cell callback will run before collapse instance open
+            .table-row
+              .table-cell afterOpen
+              .table-cell instance (object)
+              .table-cell callback will run after collapse instance open
+            .table-row
+              .table-cell beforeClose
+              .table-cell instance (object)
+              .table-cell callback will run before collapse instance close
+            .table-row
+              .table-cell afterClose
+              .table-cell instance (object)
+              .table-cell callback will run after collapse instance close
+            .table-row
+              .table-cell beforeAnimation
+              .table-cell instance (object)
+              .table-cell callback will run before start modal transition
+            .table-row
+              .table-cell afterAnimation
+              .table-cell instance (object)
+              .table-cell callback will run after modal transition end
+            .table-row
+              .table-cell beforeContentLoad
+              .table-cell instance (object)
+              .table-cell callback will run before request data (ajax/iframe)
+            .table-row
+              .table-cell afterContentLoad
+              .table-cell instance (object)
+              .table-cell callback will run after request data completed and append to modal (ajax/iframe)
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell open
+              .table-cell
+              .table-cell open instance
+            .table-row
+              .table-cell close
+              .table-cell
+              .table-cell close instance
+            .table-row
+              .table-cell loadAjax
+              .table-cell
+              .table-cell call to action load ajax content (useful when you update the request)
+            .table-row
+              .table-cell loadIframe
+              .table-cell
+              .table-cell call to action load iframe content (useful when you update the iframe source)
+          a.btn.btn-primary(href='modal.html', title='Modal demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelFive',value='panelFive') Tab
+      .bls-panel#panelFive
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell ul[data-bls-tabs]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeOpen
+              .table-cell instance (object)
+              .table-cell callback will run before tab's panel instance open
+            .table-row
+              .table-cell afterOpen
+              .table-cell instance (object)
+              .table-cell callback will run after tab's panel instance open
+            .table-row
+              .table-cell beforeClose
+              .table-cell instance (object)
+              .table-cell callback will run before tab's panel instance close
+            .table-row
+              .table-cell afterClose
+              .table-cell instance (object)
+              .table-cell callback will run after tab's panel instance close
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell open
+              .table-cell
+              .table-cell open instance
+          a.btn.btn-primary(href='tabs.html', title='Tabs demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelSix',value='panelSix') Lazy Load
+      .bls-panel#panelSix
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell img[data-bls-lazy]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell delay (ms)
+              .table-cell 1000
+              .table-cell Time to wait before request the resource (calculate begin window load event happen)
+            .table-row
+              .table-cell offset
+              .table-cell '0px'
+              .table-cell
+                a(href='https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API') https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+            .table-row
+              .table-cell threshold
+              .table-cell 0.2
+              .table-cell
+                a(href='https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API') https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+            .table-row
+              .table-cell type
+              .table-cell
+                strong scroll
+                br
+                | delay
+              .table-cell If scroll => load and when user scroll to element (by Intersection_Observer_API), if not, load and show after 'delay' time when window load event happen.
+            .table-row
+              .table-cell force
+              .table-cell false
+              .table-cell force to reinit
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            //- .table-row
+            //-   .table-cell initialized
+            //-   .table-cell instance (object)
+            //-   .table-cell callback after 1 instance created.
+            //- .table-row
+            //-   .table-cell initializedAll
+            //-   .table-cell instances (array of objects)
+            //-   .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell afterLoad
+              .table-cell instance (object)
+              .table-cell callback will run after content instance (image) loaded
+          a.btn.btn-primary(href='lazy.html', title='Lazyload demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelSeven',value='panelSeven') Selection
+      .bls-panel#panelSeven
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell select[data-bls-selection]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell placeholder
+              .table-cell
+              .table-cell Text value to display as a placeholder (when nothing selected)
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeOpen
+              .table-cell instance (object)
+              .table-cell callback will run before instance's list options open
+            .table-row
+              .table-cell afterOpen
+              .table-cell instance (object)
+              .table-cell callback will run after instance's list options open
+            .table-row
+              .table-cell beforeClose
+              .table-cell instance (object)
+              .table-cell callback will run before instance's list options close
+            .table-row
+              .table-cell afterClose
+              .table-cell instance (object)
+              .table-cell callback will run after instance's list options close
+            .table-row
+              .table-cell beforeSelect
+              .table-cell instance (object)
+              .table-cell callback will run before select an option
+            .table-row
+              .table-cell afterSelect
+              .table-cell instance (object)
+              .table-cell callback will run after select an option
+            .table-row
+              .table-cell beforeUnSelect
+              .table-cell instance (object)
+              .table-cell callback will run before unselect an option
+            .table-row
+              .table-cell afterUnSelect
+              .table-cell instance (object)
+              .table-cell callback will run after unselect an option
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell open
+              .table-cell
+              .table-cell open options list of instance
+            .table-row
+              .table-cell close
+              .table-cell
+              .table-cell close options list of instance
+            .table-row
+              .table-cell selected
+              .table-cell
+              .table-cell if provide value => select option or multi options (value is array and allow to multi select), if not provide => get the current value
+            .table-row
+              .table-cell selectedIndex
+              .table-cell
+              .table-cell if provide index => select option or multi options at index(s) (index(s) is array and allow to multi select), if not provide => get the current value
+            .table-row
+              .table-cell currentIndex
+              .table-cell
+              .table-cell return current index of selected option (single)
+          a.btn.btn-primary(href='selection.html', title='Selection demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelEight',value='panelEight') Gallery
+      .bls-panel#panelEight
+        .bls-panel__body
+          p This class extends from BlsModal so it inherit options and event from BlsModal and some will be set default as below:
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell [data-bls-gallery]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell type
+              .table-cell image
+              .table-cell show a group of images
+            .table-row
+              .table-cell display
+              .table-cell fullscreen
+              .table-cell
+            .table-row
+              .table-cell scrollOverlay
+              .table-cell false
+              .table-cell
+            .table-row
+              .table-cell thumbnail
+              .table-cell true
+              .table-cell
+            .table-row
+              .table-cell children
+              .table-cell img
+              .table-cell CSS selector to get list of DOM elements as items in group.
+            .table-row
+              .table-cell loading
+              .table-cell a base64 image
+              .table-cell image loading when go to other item
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell beforeSlide
+              .table-cell instance (object)
+              .table-cell callback will run before slide to other item
+            .table-row
+              .table-cell afterSlide
+              .table-cell instance (object)
+              .table-cell callback will run after slide to other item
+          h4 Methods:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Method
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell goPrev
+              .table-cell
+              .table-cell go to previous item
+            .table-row
+              .table-cell goNext
+              .table-cell
+              .table-cell go to next item
+          a.btn.btn-primary(href='gallery.html', title='Gallery demo') Demo
+      button.bls-accordion__heading(type="button",data-bls-accordion,data-target='#panelNine',value='panelNine') Validation
+      .bls-panel#panelNine
+        .bls-panel__body
+          h4 Options:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Option
+              .table-cell Default / Values
+              .table-cell Explain
+            .table-row
+              .table-cell selector
+              .table-cell form[data-bls-validation]
+              .table-cell CSS selector to get DOM elements that applied plugin.
+            .table-row
+              .table-cell required
+              .table-cell HTML5 required attribute
+              .table-cell set field required
+            .table-row
+              .table-cell pattern
+              .table-cell HTML5 pattern attribute
+              .table-cell set pattern to verify
+          h4 Events:
+          .table.table-options
+            .table-row.table-head
+              .table-cell Event (callback)
+              .table-cell Parameters
+              .table-cell Explain
+            .table-row
+              .table-cell initialized
+              .table-cell instance (object)
+              .table-cell callback after 1 instance created.
+            .table-row
+              .table-cell initializedAll
+              .table-cell instances (array of objects)
+              .table-cell callback after All instances created (at the time when constructor excuted).
+            .table-row
+              .table-cell beforeDoSuccess
+              .table-cell instance (object)
+              .table-cell callback will run before submit the form
+          a.btn.btn-primary(href='validate.html', title='Validation demo') Demo

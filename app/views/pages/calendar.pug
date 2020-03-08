@@ -1,0 +1,36 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control - Calendar
+      .desc
+        p Calendar ...
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      form.form-demo(action="#")
+        .form-group
+          input.form-control#inputCalendarFull(type="date",placeholder="Select a date",disabled)
+        .form-group
+          #calendarFull(data-bls-calendar)
+  section.section-three
+    .container
+      h2.heading II - As an input
+      form.form-demo(action="#")
+        .form-group
+          input.form-control(type="date",placeholder="Select a date",data-bls-calendar='data-bls-calendar')
+  section.section-four
+    .container
+      h2.heading III - Avandce Calendar
+      form.form-demo(action="#")
+        .form-group
+          #calendarEvent(data-bls-calendar='data-bls-calendar',data-class='bls-calendar--fluid')

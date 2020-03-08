@@ -1,0 +1,29 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Control: Lazy
+      .desc
+        p Apply lazy load for elements
+  section.section-two
+    .container
+      h2.heading I - Basic usage
+      form.form-demo(action="#")
+        .form-group
+          .img
+            img.fade(src=require('../../assets/images/ajax-loader.gif'),data-bls-lazy,data-source=require('../../assets/images/logo-full.png'))
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')

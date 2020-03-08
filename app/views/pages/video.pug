@@ -1,0 +1,43 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Video Player
+      .desc
+        p Wrapper for video element
+  section.section-two
+    .container
+      h2.heading I - Default Setting
+      h3 Basic Player
+      form.form-demo(action="")
+        .form-group
+          video(controls, playsinline, preload='auto', loop, autoplay)
+            source(src='https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm', type='video/webm')
+            source(src='https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4', type='video/mp4')
+            | Sorry, your browser doesn't support embedded videos.
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
+      h3 Youtube Player
+      form.form-demo(action="")
+        .form-group
+          video(controls, playsinline, preload='auto', data-type='youtube', src='https://www.youtube.com/watch?v=Pkh8UtuejGw')
+            | Sorry, your browser doesn't support embedded videos.
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')

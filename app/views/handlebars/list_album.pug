@@ -1,0 +1,6 @@
+include ../mixins/all
+ul.list-albums
+  |{{#each this}}
+  li
+    a(href='//profile/{{userId}}',title='{{title}}') {{title}}
+  |{{/each}}

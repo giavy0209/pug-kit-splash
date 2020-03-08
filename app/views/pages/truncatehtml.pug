@@ -1,0 +1,80 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-nav
+    include ../shared/demo_nav
+  section.section-one
+    .container
+      h1 Truncate HTML format
+      .desc
+        p ....
+  section.section-two
+    .container
+      h2.heading Default
+      form.form-demo(action="")
+        h3 Input
+        .bls-truncatehtml
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unknown printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+        h3 Output
+        .bls-truncatehtml(data-bls-truncatehtml, data-length='175')
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an u
+              img(src='#', alt='common')
+            | nknown printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+        p
+          a.btn.btn-primary#destroy(href='javascript:void(0);', title='destroy') Destroy
+      h2.heading View more, view less
+      form.form-demo(action='')
+        h3 Input
+        .bls-truncatehtml
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unknown printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+        h3 Output
+        .bls-truncatehtml(data-bls-truncatehtml, data-length='175', data-view-more='view more|view less')
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unknown printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+      h2.heading Text fade
+      form.form-demo(action="")
+        h3 Input
+        .bls-truncatehtml
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unknown printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+        h3 Output
+        .bls-truncatehtml(data-bls-truncatehtml, data-length='175', data-text-fade='25')
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unkn
+              span own printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+      h2.heading Text fade view more view less
+      form.form-demo(action="")
+        h3 Input
+        .bls-truncatehtml
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unknown printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+        h3 Output
+        .bls-truncatehtml(data-bls-truncatehtml, data-length='175', data-text-fade='25', data-view-more='more|less')
+          .bls-content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+            a(href='#', title='title') an unkn
+              span own printer took a galley of 
+            | type and scrambled it to make a type specimen book.
+        h3 &nbsp;
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')

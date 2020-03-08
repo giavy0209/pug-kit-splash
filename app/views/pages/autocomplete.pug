@@ -1,0 +1,44 @@
+extends ../layouts/layout
+
+block vars
+  - title = "BrayLeinoSplash Starter Kit";
+  - keyword = "Splash, BrayLeino";
+  - description = "BrayLeinoSplash Starter Kit - Pug/Sass/ES6 - webpack";
+  - menuIndex = 2
+
+block container
+  section.section-one
+    .container
+      h1 Tabs
+  section.section-two
+    .container
+      form.form-demo(action="")
+        .form-group
+          h2.heading Demo
+        .form-group
+          h3 Default Setting
+          .tabs-wrapper
+            ul.nav.bls-tab(data-tabs)
+              li.bls-tab--item.active
+                a.bls-tab--item--link(href='#tab1',title='Tab 1') Tab 1
+              li.bls-tab--item
+                a.bls-tab--item--link(href='#tab2',title='Tab 2') Tab 2
+              li.bls-tab--item
+                a.bls-tab--item--link(href='#tab3',title='Tab 3') Tab 3
+            .tab-content-wrapper
+              .bls-tab-panel.active#tab1
+                .bls-tab-panel--body
+                  p This is tab 1
+              .bls-tab-panel#tab2
+                .bls-tab-panel--body
+                  p This is tab 2
+              .bls-tab-panel#tab3
+                .bls-tab-panel--body
+                  p This is tab 3
+        .form-group
+          h6 HTML
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/html')
+
+        .form-group
+          h6 Javascript
+          textarea.text-codemirror(cols="30", rows="10", data-code='text/javascript')
